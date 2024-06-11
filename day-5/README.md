@@ -10,6 +10,7 @@ AWS (Amazon Web Services) provides multiple layers of security to protect resour
         They operate at the instance level and evaluate the rules before allowing traffic to reach the instance.
         Security Groups are stateful, meaning that if an inbound rule allows traffic, the corresponding outbound traffic is automatically allowed, and vice versa.
         Changes made to security group rules take effect immediately.
+        Note: By default security group denies all inbound traffic and allows all outbound traffic except port 25 as its a mailing service bcoz aws doesnt want to record ec2/your application's ip address.
 
     Network Access Control Lists (NACLs):
         NACLs are an additional layer of security that operates at the subnet level. They act as stateless traffic filters for inbound and outbound traffic at the subnet boundary.
